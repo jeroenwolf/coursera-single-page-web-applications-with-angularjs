@@ -1,0 +1,11 @@
+{
+  "name": "angularjs",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {},
+  "license": "ISC",
+  "dependencies": {
+    "angular": "^1.7.8"
+  }
+}
