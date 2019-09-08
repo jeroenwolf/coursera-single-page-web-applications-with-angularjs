@@ -8,7 +8,6 @@
 
     function MyInfoController(SignUpDataService, MenuService, ApiPath) {
         var $ctrl = this;
-//        $ctrl.alreadyLoaded = false;
 
         $ctrl.isRegistered = function () {
             var signUpInfo = SignUpDataService.getSignUpInfo();
@@ -24,22 +23,6 @@
                 $ctrl.favoriteDishName = signUpInfo.dishData.name;
 
                 $ctrl.basePath = ApiPath;
-
-
-//                $ctrl.alreadyLoaded = true;
-
-/*                var promise = MenuService.getMenuItem(signUpInfo.dish);
-                promise.then(function (response) {
-                    $ctrl.favoriteDishShortName = response.short_name;
-                    $ctrl.favoriteDishDescription = response.description;
-                    $ctrl.favoriteDishName = response.name;
-
-                    $ctrl.basePath = ApiPath;
-
-                    $ctrl.alreadyLoaded = true;
-                }).catch(function (error) {
-                    console.log(error);
-                });*/
 
                 return true;
             } else {
