@@ -1,0 +1,35 @@
+<div class="container">
+    <h2 class="text-center">Your registered information</h2>
+
+    <span ng-if="!myInfoCtrl.isRegistered()">
+        Not Signed Up Yet. <a ui-sref="public.sign-up">Sign up Now!</a>
+    </span>
+
+    <span ng-if="myInfoCtrl.isRegistered()">
+        First name : {{myInfoCtrl.lastName}}
+            <br>
+        Last name : {{myInfoCtrl.firstName}}
+            <br>
+        Email : {{myInfoCtrl.email}}
+            <br>
+        Phone number : {{myInfoCtrl.phoneNumber}}
+            <br>
+        Your favorite dish :
+
+        <div class="menu-item-tile col-md-6">
+          <div class="row">
+            <div class="col-sm-5">
+              <div class="menu-item-photo">
+                <img class="img-responsive" width="250" height="150" ng-src="{{myInfoCtrl.basePath}}/images/{{myInfoCtrl.favoriteDishShortName}}.jpg" alt="{{myInfoCtrl.favoriteDishName}}">
+              </div>
+            </div>
+            <div class="menu-item-description col-sm-7">
+              <h3 class="menu-item-title">{{myInfoCtrl.favoriteDishName}}</h3>
+              <p class="menu-item-details">{{myInfoCtrl.favoriteDishDescription}}</p>
+            </div>
+          </div>
+          <hr class="visible-xs">
+        </div>
+    </span>
+
+</div>
