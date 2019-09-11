@@ -116,23 +116,6 @@ h3.menu-item-title {
 
 /* BEGIN MY INFO AND SIGN UP PAGES*/
 
-#button-sign-up {
-  display: inline-block;
-  text-align: right;
-}
-
-label {
-  display: inline-block;
-  width: 140px;
-  text-align: right;
-}​
-
-input {
-  font-size: 24px;
-  margin-bottom: 10px;
-  color: #222;
-}
-
 .ng-touched.ng-valid {
   border: 2px green solid;
 }

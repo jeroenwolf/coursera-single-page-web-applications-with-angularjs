@@ -13,8 +13,8 @@
             var signUpInfo = SignUpDataService.getSignUpInfo();
 
             if (signUpInfo) {
-                $ctrl.lastName = signUpInfo.firstname;
-                $ctrl.firstName = signUpInfo.lastname;
+                $ctrl.lastName = signUpInfo.lastname;
+                $ctrl.firstName = signUpInfo.firstname;
                 $ctrl.email = signUpInfo.email;
                 $ctrl.phoneNumber = signUpInfo.phone;
 
