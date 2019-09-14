@@ -65,19 +65,16 @@
                 <label>Your favorite dish</label>
                 <input type="text" class="form-control" name="dish" placeholder="Your favorite dish"
                        ng-model="signUpCtrl.user.dish"
+                       ng-change="signUpCtrl.validateFavoriteDish(signUpForm)"
                        required>
-                <span ng-if="signUpForm.dish.$invalid && signUpForm.dish.$touched">
-                Must be a valid dish
-                </span>
-                <span ng-if="signUpCtrl.invalidFavoriteDish">
-                No such menu number exists
+                <span class="input-error-message" ng-if="(signUpForm.dish.$invalid && signUpForm.dish.$touched) || (signUpCtrl.invalidFavoriteDish)">
+                 No such menu number exists
                 </span>
             </div>
 
             <br>
-            <button ng-disabled="signUpForm.$invalid"
+            <button ng-disabled="signUpForm.$invalid || signUpCtrl.invalidFavoriteDish"
                     ng-click="signUpCtrl.submit(signUpCtrl.user.dish)">Submit</button>
-
             <br>
             <br>
             <span ng-if="signUpCtrl.completed">

@@ -116,6 +116,10 @@ h3.menu-item-title {
 
 /* BEGIN MY INFO AND SIGN UP PAGES*/
 
+.input-error-message {
+  color: red;
+}
+
 .ng-touched.ng-valid {
   border: 2px green solid;
 }
