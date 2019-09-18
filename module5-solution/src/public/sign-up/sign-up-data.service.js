@@ -5,15 +5,15 @@
         .service('SignUpDataService', SignUpDataService);
 
     function SignUpDataService() {
-        var $ctrl = this;
+        var service = this;
 
-        $ctrl.storeSignUpInfo = function (user, dishData) {
+        service.storeSignUpInfo = function (user, dishData) {
             user.dishData = dishData;
-            $ctrl.signUpInfo = user;
+            service.signUpInfo = user;
         }
 
-        $ctrl.getSignUpInfo = function () {
-            return $ctrl.signUpInfo;
+        service.getSignUpInfo = function () {
+            return service.signUpInfo;
         }
     }
 })();
